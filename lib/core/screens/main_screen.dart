@@ -23,6 +23,21 @@ class _MainScreenState extends State<MainScreen> {
 
   int currentIndex = 0;
 
+  List<BottomNavigationBarItem> navBarItems = [
+    const BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
+    ),
+    const BottomNavigationBarItem(
+      icon: Icon(Icons.favorite),
+      label: 'Favorites',
+    ),
+    const BottomNavigationBarItem(
+      icon: Icon(Icons.calendar_today),
+      label: 'Planner',
+    ),
+  ];
+
   Widget navBar(){
     return BottomNavigationBar(
       currentIndex: currentIndex,
@@ -44,20 +59,7 @@ class _MainScreenState extends State<MainScreen> {
           }
         });
       },
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: 'Favorites',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.calendar_today),
-          label: 'Planner',
-        ),
-      ],
+      items: navBarItems,
     );
   }
 
