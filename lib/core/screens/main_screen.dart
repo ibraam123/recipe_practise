@@ -74,7 +74,10 @@ class _MainScreenState extends State<MainScreen> {
           style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black),
         ),
       ),
-      body: screens[currentIndex],
+      body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: screens[currentIndex]
+      ),
     );
   }
 }
